@@ -119,7 +119,7 @@ def adjust_receipt_rotation(receipt_contour, img):
 #    return no_noise_image, edges
 
 def get_edged_image(image):
-    edges = cv2.Canny(no_noise_image, 100, 200)
+    edges = cv2.Canny(image, 100, 200)
     return edges
 # In[9]:
 
