@@ -48,6 +48,10 @@ def image_resize(image, width = None, height = None, inter = cv2.INTER_AREA):
 
 # In[4]:
 
+def get_edged_image(image):
+    edges = cv2.Canny(image, 100, 200)
+    return edges
+
 
 def denoise_filter2D(image, kernel=None):
     if kernel is None:
@@ -118,9 +122,7 @@ def adjust_receipt_rotation(receipt_contour, img):
     
 #    return no_noise_image, edges
 
-def get_edged_image(image):
-    edges = cv2.Canny(image, 100, 200)
-    return edges
+
 # In[9]:
 
 
