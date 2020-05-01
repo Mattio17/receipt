@@ -107,18 +107,20 @@ def adjust_receipt_rotation(receipt_contour, img):
 # In[8]:
 
 
-def prepare_image(gray_scaled_image):
-    no_noise_image = denoise_filter2D(gray_scaled_image)
-
-    threshold_image = standard_thresholding(no_noise_image)
-
-    no_noise_image = denoise_filter2D(threshold_image)
+#def prepare_image(gray_scaled_image):
+#    no_noise_image = denoise_filter2D(gray_scaled_image)
+#
+#    threshold_image = standard_thresholding(no_noise_image)
+#
+#    no_noise_image = denoise_filter2D(threshold_image)
     
-    edges = cv2.Canny(no_noise_image,100,200)
+#    edges = cv2.Canny(no_noise_image,100,200)
     
-    return no_noise_image, edges
+#    return no_noise_image, edges
 
-
+def get_edged_image(image):
+    edges = cv2.Canny(no_noise_image, 100, 200)
+    return edges
 # In[9]:
 
 
