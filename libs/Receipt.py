@@ -67,7 +67,7 @@ def denoise_filter2D(image, kernel=None):
 
 def standard_thresholding(image):
 
-    ret3,threshold_image = cv2.threshold(image,0,255,cv2.THRESH_BINARY)
+    ret3,threshold_image = cv2.threshold(image,0,255,cv2.THRESH_BINARY_INV)
     
     return threshold_image
 
